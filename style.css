@@ -1,0 +1,134 @@
+/* Style global pour toutes les pages */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(145deg, #0e0e10, #1b1b2f);
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+header {
+    background: #1f1f2e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: fadeIn 2s;
+}
+
+header h1 {
+    color: #8f44fd;
+    font-size: 2.5rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #8f44fd;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+section {
+    padding: 40px;
+    text-align: center;
+    animation: fadeInUp 1.5s;
+}
+
+/* Bouton LinkedIn */
+.button-linkedin {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0a66c2;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-linkedin:hover {
+    background: #004182;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(10, 102, 194, 0.5);
+}
+
+/* Animation pour les sections */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation gaming : effet de surbrillance autour des titres */
+h1 {
+    text-shadow: 0 0 10px #8f44fd, 0 0 20px #8f44fd, 0 0 30px #8f44fd;
+}
+
+/* Animation hover sur les liens */
+nav a:hover {
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
+}
+
+/* Listes des projets */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+ul li:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.highlight {
+    color: #ffffff; /* Texte en blanc */
+    font-weight: bold;
+    text-shadow: 0 0 5px #8f44fd, 0 0 10px #8f44fd; /* Surbrillance violette */
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    padding: 20px;
+    padding-top: 100px; /* Ajout d'espace sous la barre */
+}

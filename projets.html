@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles globaux */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('wallpaper.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
+        }
+
+        header {
+            background-color: rgba(31, 31, 46, 0.8);
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 0 10px #8f44fd;
+        }
+
+        header h1 {
+            color: #8f44fd;
+            font-size: 2.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            text-shadow: 0 0 5px #ffffff;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #8f44fd;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+            transform: scale(1.1);
+            text-shadow: 0 0 10px #8f44fd;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 120px auto; /* Ajustement pour espace sous header */
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(31, 31, 46, 0.8);
+            box-shadow: 0 0 20px #8f44fd;
+        }
+
+        .accordion {
+            background-color: rgba(31, 31, 46, 0.9);
+            color: #ffffff;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            box-shadow: 0 0 10px #8f44fd;
+        }
+
+        .accordion:hover {
+            background-color: #8f44fd;
+            transform: scale(1.02);
+        }
+
+        .panel {
+            padding: 15px;
+            display: none;
+            overflow: hidden;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin-top: 5px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #8f44fd;
+        }
+
+        .panel ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .panel ul li {
+            margin: 5px 0;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            box-shadow: 0 0 5px #8f44fd;
+        }
+
+        .panel p {
+            margin: 10px 0;
+            font-size: 1rem;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mes Projets</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="bts.html">Le BTS</a>
+            <a href="entreprise.html">Entreprise</a>
+            <a href="projets.html">Projets</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <button class="accordion">Projet 1 : Création d'un domaine Active Directory</button>
+        <div class="panel">
+            <ul>
+                <li>Configurer un contrôleur de domaine.</li>
+                <li>Installer et configurer les services Active Directory Domain Services (AD DS).</li>
+                <li>Créer des unités d’organisation (OU) pour les différents départements (RH, IT, Finances, Logistique).</li>
+                <li>Créer des groupes de sécurité pour chaque département.</li>
+                <li>Ajouter des utilisateurs aux groupes correspondants.</li>
+            </ul>
+        </div>
+
+        <button class="accordion">Projet 2 : Migration du domaine Active Directory</button>
+        <div class="panel">
+            <p>En cours...</p>
+        </div>
+    </div>
+
+    <script>
+        // Gestion des barres déroulantes
+        const accordions = document.querySelectorAll('.accordion');
+
+        accordions.forEach(accordion => {
+            accordion.addEventListener('click', () => {
+                accordion.classList.toggle('active');
+                const panel = accordion.nextElementSibling;
+                if (panel.style.display === 'block') {
+                    panel.style.display = 'none';
+                } else {
+                    panel.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

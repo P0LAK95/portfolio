@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entreprise</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('wallpaper.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
+        }
+
+        header {
+            background-color: rgba(31, 31, 46, 0);
+            padding: 20px;
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            color: #8f44fd;
+            font-size: 2.5rem;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #8f44fd;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+            transform: scale(1.1);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center;
+            padding: 20px;
+            padding-top: 100px; /* Ajout d'espace sous la barre */
+        }
+
+        .container h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .container img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .info {
+            text-align: left;
+            margin: 20px 0;
+        }
+
+        .info p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mon entreprise</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="bts.html">Le BTS</a>
+            <a href="entreprise.html">Entreprise</a>
+            <a href="projets.html">Projets</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>J'occupe un poste de technicien informatique chez Donaldson</h2>
+        <img src="donaldson.png" alt="Photo de l'usine Donaldson">
+
+        <div class="info">
+            <p><strong>Groupe :</strong> Donaldson</p>
+            <p><strong>Création :</strong> 1915</p>
+            <p><strong>Lieu :</strong> Domjean (50420)</p>
+            <p><strong>Siège social :</strong> Minneapolis, Minnesota, USA</p>
+            <p><strong>Siège européen :</strong> Louvain, Belgique</p>
+            <p><strong>Chiffre d’affaires :</strong> 73 milliards $</p>
+            <p><strong>Activité :</strong> Fabrication de solutions de filtres à air, filtres à huiles et filtres moteur pour des groupes agricoles et BTP (Massey Ferguson, John Deere, Caterpillar, JCB, etc.)</p>
+        </div>
+
+        <img src="map.png" alt="Présence mondiale de Donaldson">
+    </div>
+</body>
+</html>
