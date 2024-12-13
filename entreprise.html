@@ -81,6 +81,48 @@
         .info p {
             margin: 5px 0;
         }
+
+        .accordion {
+            background-color: rgba(31, 31, 46, 0.9);
+            color: #ffffff;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            box-shadow: 0 0 10px #8f44fd;
+        }
+
+        .accordion:hover {
+            background-color: #8f44fd;
+            transform: scale(1.02);
+        }
+
+        .panel {
+            padding: 15px;
+            display: none;
+            overflow: hidden;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin-top: 5px;
+            border-radius: 5px;
+        }
+
+        .panel ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .panel ul li {
+            margin: 5px 0;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -109,6 +151,49 @@
         </div>
 
         <img src="map.png" alt="Présence mondiale de Donaldson">
+
+        <h2>Mes missions</h2>
+
+        <button class="accordion">Support utilisateur</button>
+        <div class="panel">
+            <ul>
+                <li>Dépannage informatique</li>
+                <li>Gestion de tickets</li>
+            </ul>
+        </div>
+
+        <button class="accordion">Gestion du parc informatique</button>
+        <div class="panel">
+            <ul>
+                <li>Maintien des machines à jour (PC, téléphones, tablettes)</li>
+            </ul>
+        </div>
+
+        <button class="accordion">Maintenance</button>
+        <div class="panel">
+            <ul>
+                <li>Matériel informatique (machines, périphériques)</li>
+                <li>Maintenance des postes</li>
+                <li>Stocks</li>
+            </ul>
+        </div>
     </div>
+
+    <script>
+        // Gestion des barres déroulantes
+        const accordions = document.querySelectorAll('.accordion');
+
+        accordions.forEach(accordion => {
+            accordion.addEventListener('click', () => {
+                accordion.classList.toggle('active');
+                const panel = accordion.nextElementSibling;
+                if (panel.style.display === 'block') {
+                    panel.style.display = 'none';
+                } else {
+                    panel.style.display = 'block';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
